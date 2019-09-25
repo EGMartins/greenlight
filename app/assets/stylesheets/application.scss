@@ -87,7 +87,12 @@ a {
 }
 
 .background {
-  background-color: #fbf8e7;
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 100%;
+}
+
+.wrapper {
+  background-image: url(background.jpeg);
 }
 
 .error-section {
