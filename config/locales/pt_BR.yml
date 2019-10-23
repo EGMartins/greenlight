@@ -248,6 +248,8 @@ pt_BR:
   max_concurrent: O número máximo de sessões simultâneas foi alcançado.
   modal:
     create_room:
+      access_code: Código de Acesso
+      access_code_placeholder: Gerar um código opcional de acesos a sala
       auto_join: "Automaticamente, me junte a sala."
       create: Criar Sala
       free_delete: Você poderá apagar esta sala a qualquer momento.
@@ -279,7 +281,10 @@ pt_BR:
       title: Configurações da sala
       update: Atualizar sala
       client: Selecione o tipo de cliente
+      join_moderator: Todos os usuários entram como moderadores
       mute: Usuários entram em mudo
+      require_approval: Exige aprovação do moderador antes de entrar
+      start: Permite todo usuário se juntar a essa sala
       default: Padrão
       html: HTML5
       flash: Flash
