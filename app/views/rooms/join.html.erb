@@ -88,6 +88,7 @@
     cpf = $("#cpf").val();
     if(!validarCPF(cpf)){
       alert("Número do CPF inválido!");
+      cpf.val("");
     }
     changeJoinName();
   });
