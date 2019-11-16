@@ -68,8 +68,12 @@
  <script>
   var firstName = "";
   var cpf = "";
+  var cpf_mask = $("#cpf");;
   var codeStore = "";
 
+  $(document).ready(function() {
+    cpf_mask.mask('000.000.000-00', {reverse: true});
+  });
   $("#first-name").blur(function() {
     firstName = $("#first-name").val();
     changeJoinName();
