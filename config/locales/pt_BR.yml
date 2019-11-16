@@ -112,9 +112,9 @@ pt_BR:
   docs: Documentação
   email: E-mail
   email_sent: "Seu e-mail de %{email_type} foi enviado! (se você não recebeu, ele pode ter caído na sua caixa de spam)"
-  enter_your_name: Insira seu nome
-  enter_your_cpf: Insira seu CPF
-  enter_your_code_store: Insira o código da sua loja
+  enter_your_name: Nome
+  enter_your_cpf: CPF
+  enter_your_code_store: Código da loja
   errors:
     bigbluebutton:
       help: "Por favor, tenha certeza que as etapas apropriadas foram finalizadas.. <a href=\"%{doc_link}\">Saiba mais</a>"
