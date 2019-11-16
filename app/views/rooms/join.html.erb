@@ -100,7 +100,7 @@
     $("#join-name").val(firstName + " - " + codeStore + " - " + cpf)
   }
   function validarCPF(strCPF) {
-    strCPF = strCPF.replace('/[^0-9]/','');
+    strCPF = strCPF.replace(/[^0-9]+/g,'');
     var Soma;
     var Resto;
     Soma = 0;
