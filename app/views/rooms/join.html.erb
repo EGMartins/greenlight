@@ -35,16 +35,53 @@
         <%= f.hidden_field(:search, :value => params[:search])%>
         <%= f.hidden_field(:column, :value => params[:column])%>
         <%= f.hidden_field(:direction, :value => params[:direction])%>
-        <%= f.text_field :join_name,
-            required: true,
-            class: "form-control join-form",
-            placeholder: t("enter_your_name"),
-            value: "#{@name}",
-            readonly: !current_user.nil?, 
-            autofocus: true
-            %>
+        <%= f.hidden_field :join_name, id: "join-name" %>
+        <%= f.text_field :first_name,
+          id: "first-name",
+          required: true,
+          class: "form-control join-form",
+          placeholder: t("enter_your_name"),
+          autofocus: true
+          %>
+        <%= f.text_field :cpf,
+          id: "cpf",
+          required: true,
+          class: "form-control join-form",
+          placeholder: t("enter_your_cpf")
+          %>
+        <%= f.text_field :code_store,
+          id: "code-store",
+          required: true,
+          class: "form-control join-form",
+          placeholder: t("enter_your_code_store")
+          %>
         <%= f.submit (!@room_running && @anyone_can_start)? t("room.start") : t("room.join"), class: "btn btn-primary btn-sm col-sm-3 form-control join-form" %>
       </div>
     <% end %>
   <% end %>
 <% end %>
+
+
+ <script>
+  var firstName = "";
+  var cpf = "";
+  var codeStore = "";
+
+  $("#first-name").blur(function() {
+    firstName = $("#first_name").val();
+    changeJoinName();
+  });
+  $("#cpf").blur(function() {
+    cpf = $("#cpf").val();
+    changeJoinName();
+  });
+  $("#code-store").blur(function() {
+    codeStore = $("#code-store").val();
+    changeJoinName();
+  });
+
+  function changeJoinName() {
+    $("#join-name").val(firstName + " - " + codeStore + " - " + cpf)
+  }
+
+ </script>
