@@ -42,19 +42,22 @@
           class: "form-control join-form",
           placeholder: t("enter_your_name"),
           autofocus: true
-          %>
+        %>
+      <br>
         <%= f.text_field :cpf,
           id: "cpf",
           required: true,
           class: "form-control join-form",
           placeholder: t("enter_your_cpf")
-          %>
+        %>
+      <br>
         <%= f.text_field :code_store,
           id: "code-store",
           required: true,
           class: "form-control join-form",
           placeholder: t("enter_your_code_store")
-          %>
+        %>
+      <br>
         <%= f.submit (!@room_running && @anyone_can_start)? t("room.start") : t("room.join"), class: "btn btn-primary btn-sm col-sm-3 form-control join-form" %>
       </div>
     <% end %>
@@ -68,7 +71,7 @@
   var codeStore = "";
 
   $("#first-name").blur(function() {
-    firstName = $("#first_name").val();
+    firstName = $("#first-name").val();
     changeJoinName();
   });
   $("#cpf").blur(function() {
